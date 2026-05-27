@@ -1,0 +1,10 @@
+Route::view('/','Home.main')->name('index')
+->middleware(['auth', 'verified']);
+
+Route::prefix('financeiro')->middleware(['auth', 'verified'])->group(function () {
+    Route::resource('/', FinanceiroController::class)->names('financeiro');
+    Route::resource('credito', CreditoController::class);
+    Route::resource('sod', SodController::class);
+});
+
+require __DIR__.'/auth.php';

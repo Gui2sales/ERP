@@ -1,0 +1,125 @@
+
+<div class="cartao container-fluid mt-3">
+    @foreach ( $sap['reembolsoPromotor'] as $rp)
+        <div class="row">
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">REEMBOLSO:</span><span> {{$rp['numReembolso']}}</span>
+            </div>
+            <div class="d-flex col-6 mb-1">
+                <span class="fw-bold">SOLICITANTE:</span><span> {{$rp['solicitante']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">STATUS:</span><span> {{$rp['status']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">CPF:</span><span> {{$rp['cic']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">BANCO:</span><span> {{$rp['banco']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">AGENCIA:</span><span> {{$rp['agencia'] . "-" . $rp['codigoAgencia']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">C/C:</span><span> {{$rp['c/c'] . '-' . $rp['codigoCC']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">FILIAL:</span><span> {{$rp['filialCod'] . ' ' . $rp['filialNome']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">INÍCIO:</span><span> {{$rp['inicio']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">TÉRMINO:</span><span> {{$rp['fim']}}</span>
+            </div>
+        </div>
+    @endforeach
+    <div class="texto_subtopico_sublinhado">
+        <span>LANÇAMENTO DE DESPESAS</span>
+    </div>
+    @forelse ( $sap['documentoDespesa'] as $dp)
+        <div class="row mt-2">
+            <div class="d-flex col-2 mb-1">
+                <span class="fw-bold">SEQUENCIA:</span><span> {{$dp['sequencia']}}</span>
+            </div>
+            <div class="d-flex col-4 mb-1">
+                <span class="fw-bold">DESPESA:</span><span> {{$dp['codDesp'] . " " . $dp['descDespesa']}}</span>
+            </div>
+            @isset($dp['subDescDespesa'])
+                <div class="d-flex col-6 mb-1">
+                    <span class="fw-bold">SUB DESCRIÇÃO:</span>
+                    <span>{{$dp['subDescDespesa']}}</span>
+                </div>
+            @endisset
+            <div class="d-flex col-12 mb-1">
+                <span class="fw-bold">DOCUMENTO:</span><span> {{$dp['documento']}}</span>
+            </div>
+            <div class="d-flex col-12 mb-1">
+                <span class="fw-bold">CNPJ:</span><span> {{$dp['cnpj']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">MODELO:</span><span> {{$dp['modelo']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">NOTA FISCAL:</span><span> {{$dp['notaFiscal']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">FORNECEDOR:</span><span> {{$dp['fornecedor']}}</span>
+            </div>
+            <div class="d-flex col-3 mb-1">
+                <span class="fw-bold">SERIE:</span><span> {{$dp['ser']}}</span>
+            </div>
+            <div class="d-flex col-4 mb-1">
+                <span class="fw-bold">VALOR:</span><span> {{$dp['valor']}}</span>
+            </div>
+            <div class="d-flex col-4 mb-1">
+                <span class="fw-bold">REEMBOLSÁVEL?:</span><span> {{$dp['reembosavel']}}</span>
+            </div>
+            <div class="d-flex col-4 mb-1">
+                <span class="fw-bold">DATA:</span><span> {{$dp['data']}}</span>
+            </div>
+            @isset($dp['veiculo'])
+                <div class="d-flex col-4 mb-1">
+                    <span class="fw-bold">PLACA DO VEÍCULO:</span><span> {{$dp['placa']}}</span>
+                </div>
+                <div class="d-flex col-4 mb-1">
+                    <span class="fw-bold">KM:</span><span> {{$dp['km']}}</span>
+                </div>
+                <div class="d-flex col-4 mb-1">
+                    <span class="fw-bold">QUANTIDADE DE LITROS:</span><span> {{$dp['litros']}}</span>
+                </div>
+                <div class="d-flex col-4 mb-1">
+                    <span class="fw-bold">KM PERCORRIDO:</span><span> {{$dp['kmRodados']}}</span>
+                </div>
+                <div class="d-flex col-4 mb-1">
+                    <span class="fw-bold">LITROS POR KM:</span><span> {{$dp['kmL']}}</span>
+                </div>
+            @endisset
+            <hr>
+        </div>
+    @empty
+        <div></div>        
+    @endforelse
+    <div class="texto_subtopico_sublinhado">
+        <span>RESUMO RELATORIO DE REEMBOLSO PROMOTOR</span>
+    </div>
+    @forelse ($sap['resumoRelatorio'] as $rr)
+        <div class="d-flex col-12 mb-1">
+            <span class="fw-bold">{{$rr['dDesp']}}:</span><span>{{ " " . $rr['valorTotal']}}</span>
+        </div>
+    @empty
+        <div></div> 
+    @endforelse
+    @forelse ($sap['resumoRelatorioSeq'] as $rrs)
+        <div class="d-flex col-12 mb-1">
+            <span class="fw-bold">{{$rrs['descricao']}}:</span><span>{{ " " . $rrs['valorTotal']}}</span>
+        </div>
+    @empty
+        <div></div> 
+    @endforelse
+    <div class="d-flex col-12 mb-1">
+        <span class="fw-bold">VALOR TOTAL A PAGAR:</span><span>{{ " " .  format_currency_br($sap['VLREEMB'])}}</span>
+    </div>
+</div>
+
+

@@ -1,0 +1,94 @@
+{
+  "images/background/CONECTACelular.gif": {
+    "file": "assets/CONECTACelular-BCxs-BFh.gif",
+    "src": "images/background/CONECTACelular.gif"
+  },
+  "images/background/CONECTAgif.gif": {
+    "file": "assets/CONECTAgif-clmkN9ag.gif",
+    "src": "images/background/CONECTAgif.gif"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BeopsB42.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-mSm7cUeB.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "resources/css/app.scss": {
+    "file": "assets/app-CoGEbyOM.css",
+    "src": "resources/css/app.scss",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/botoes.scss": {
+    "file": "assets/botoes-DwT9IQ7U.css",
+    "src": "resources/css/botoes.scss",
+    "isEntry": true,
+    "name": "botoes",
+    "names": [
+      "botoes.css"
+    ]
+  },
+  "resources/css/graficos.scss": {
+    "file": "assets/graficos-DpbglQBn.css",
+    "src": "resources/css/graficos.scss",
+    "isEntry": true,
+    "name": "graficos",
+    "names": [
+      "graficos.css"
+    ]
+  },
+  "resources/css/logo.scss": {
+    "file": "assets/logo-Ce8uCbAM.css",
+    "src": "resources/css/logo.scss",
+    "isEntry": true,
+    "name": "logo",
+    "names": [
+      "logo.css"
+    ]
+  },
+  "resources/css/main.scss": {
+    "file": "assets/main-Ddrdilf3.css",
+    "src": "resources/css/main.scss",
+    "isEntry": true,
+    "name": "main",
+    "names": [
+      "main.css"
+    ]
+  },
+  "resources/css/tabela.scss": {
+    "file": "assets/tabela-D2bK6gMM.css",
+    "src": "resources/css/tabela.scss",
+    "isEntry": true,
+    "name": "tabela",
+    "names": [
+      "tabela.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CmI_I5fy.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/bootstrap.js"
+    ],
+    "css": [
+      "assets/app-CI-7CBRc.css"
+    ],
+    "assets": [
+      "assets/bootstrap-icons-mSm7cUeB.woff2",
+      "assets/bootstrap-icons-BeopsB42.woff"
+    ]
+  },
+  "resources/js/bootstrap.js": {
+    "file": "assets/bootstrap-BuG9aa18.js",
+    "name": "bootstrap",
+    "src": "resources/js/bootstrap.js",
+    "isEntry": true
+  }
+}

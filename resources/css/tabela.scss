@@ -1,0 +1,31 @@
+.linha_destaque_verde, .celula_destaque_verde{
+    background-color: greenyellow !important;
+    border: 2px solid green !important;
+}
+
+.linha_destaque_vermelho, .celula_destaque_vermelho{
+    background-color: red !important;
+    border: 2px solid rgb(142, 0, 0) !important;
+}
+
+.linha_destaque_amarelo, .celula_destaque_amarelo{
+    background-color: rgb(255, 255, 0) !important;
+    border: 2px solid rgb(255, 115, 0) !important;
+}
+
+.linha_destaque_vermelho, .celula_destaque_vermelho, .linha_destaque_verde, .celula_destaque_verde, .linha_destaque_amarelo, .celula_destaque_amarelo {
+    font-weight: bold;
+    text-align: center;
+}
+
+.fornecedores_escolhidos{
+    width: 39px;
+}
+
+.icone_escolhido{
+    font-size: 14px;
+    color: rgb(0, 105, 0);
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
